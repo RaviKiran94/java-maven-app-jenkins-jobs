@@ -35,18 +35,15 @@ pipeline {
                 }
             }
         }
-        stage("buildImage") {
-            when {
-                expression {
-                    params.executeTests
-                }
-            }
+        
+        stage("imagebuild") {
             steps {
                 script {
                     gv.buildImage()
                 }
             }
         }
+        
         stage("deploy") {
             steps {
                 script {

@@ -35,7 +35,7 @@ pipeline {
                 }
             }
         }
-        stage("buildimage") {
+        stage("buildImage") {
             when {
                 expression {
                     params.executeTests
